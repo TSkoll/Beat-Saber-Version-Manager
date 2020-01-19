@@ -1,0 +1,29 @@
+﻿<Window x:Name="BsSwitcher" x:Class="Beat_Saber_Version_Handler.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Beat_Saber_Version_Handler"
+        mc:Ignorable="d"
+        Title="BS Switcher" Height="220" Width="320">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="Backup" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBox x:Name="BeatSaberLocationTextBox" HorizontalAlignment="Center" Margin="0,31,0,0" Text="Folder path here" TextWrapping="Wrap" VerticalAlignment="Top" Width="136"/>
+            <Button x:Name="BackupBtn" Content="Create backup" HorizontalAlignment="Center" VerticalAlignment="Top" Width="136" Click="BackupBtn_Click" Margin="0,141,0,0"/>
+
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="Swap" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <Button x:Name="SwapBtn" Content="Swap" HorizontalAlignment="Center" VerticalAlignment="Top" Width="136" Click="SwapBtn_Click" Margin="0,141,0,0"/>
+            <TextBox x:Name="BeatSaberVersionTxt" HorizontalAlignment="Center" Margin="0,31,0,0" Text="Beat Saber Version" TextWrapping="Wrap" VerticalAlignment="Top" Width="136"/>
+
+        </Grid>
+    </Grid>
+</Window>
